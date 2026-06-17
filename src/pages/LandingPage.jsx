@@ -35,7 +35,7 @@ export default function LandingPage() {
     setLoading(true);
 
     try {
-      await login('demo@dreamspace.com', 'dreamer123');
+      await login('dharshini@dreamspace.com', 'dreamer123');
     } catch (err) {
       setError(err.message);
       console.error(err);
@@ -125,7 +125,7 @@ export default function LandingPage() {
                     required
                     value={displayName}
                     onChange={(e) => setDisplayName(e.target.value)}
-                    placeholder="E.g., Star Traveler"
+                    placeholder="E.g., Dharshini, Ashwin"
                     className="w-full glass-input text-sm"
                   />
                 </div>

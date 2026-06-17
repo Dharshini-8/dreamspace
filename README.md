@@ -119,6 +119,13 @@ npm run dev
 Once the development server is running, you can access the application in your browser at:
 **`http://localhost:5173`**
 
+### Demo Login Credentials
+
+To explore the application without signing up, you can use one of the following demo accounts:
+* **Dharshini** - Email: `dharshini@dreamspace.com` | Password: `dreamer123`
+* **Ashwin** - Email: `ashwin@dreamspace.com` | Password: `dreamer123`
+* **Neo Dreamer** - Email: `demo@dreamspace.com` | Password: `dreamer123`
+
 ---
 
 ## 🎯 Learning Outcomes

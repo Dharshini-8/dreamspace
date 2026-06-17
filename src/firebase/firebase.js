@@ -149,11 +149,17 @@ export const authService = {
     await new Promise(resolve => setTimeout(resolve, 800));
 
     // Simple demo bypass
-    if (email === 'demo@dreamspace.com' && password === 'dreamer123') {
+    const demoAccounts = {
+      'dharshini@dreamspace.com': 'Dharshini',
+      'ashwin@dreamspace.com': 'Ashwin',
+      'demo@dreamspace.com': 'Neo Dreamer'
+    };
+
+    if (demoAccounts[email] && password === 'dreamer123') {
       const demoUser = {
-        uid: 'demo-user',
-        email: 'demo@dreamspace.com',
-        displayName: 'Neo Dreamer',
+        uid: 'demo-user-' + email.split('@')[0],
+        email: email,
+        displayName: demoAccounts[email],
         createdAt: new Date().toISOString()
       };
       setStorageItem(STORAGE_KEYS.CURRENT_USER, demoUser);
@@ -163,7 +169,7 @@ export const authService = {
     const users = getStorageItem(STORAGE_KEYS.USERS);
     const user = users.find(u => u.email === email);
     if (!user) {
-      throw new Error('User not found. Use demo@dreamspace.com / dreamer123 or sign up!');
+      throw new Error('User not found. Use dharshini@dreamspace.com / dreamer123 or sign up!');
     }
 
     setStorageItem(STORAGE_KEYS.CURRENT_USER, user);
